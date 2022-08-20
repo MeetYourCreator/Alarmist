@@ -1,20 +1,16 @@
 import React from 'react';
-
-
 import {
   SafeAreaView,
   StyleSheet,
   Text
 } from 'react-native';
-
-import AppNavigator from './src/AppNavigator';
+import { AppNavigator } from './src/AppNavigator';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text>Alarmist</Text>
+    <>
       <AppNavigator />
-    </SafeAreaView>
+    </>
   );
 };
 
