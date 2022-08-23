@@ -45,13 +45,13 @@ export const getAllTimeZones = async () => {
 
 export const showISO = (timestampMS, styleLight, styleDark) => {
   const zoneISO = new Date(timestampMS * 1000).toISOString();
-  const zoneISOhhmmss = zoneISO.slice(11, 16)
-  return zoneISOhhmmss
+  const zoneISOhhmmss = zoneISO.slice(11, 16);
+  return zoneISOhhmmss;
 };
 
 export const angleClock = (hour, minutes) => {
   const minuteAngle = minutes * 6;
-  const hourAngle = (hour * 30) + minutes * 0.5;
+  const hourAngle = hour * 30 + minutes * 0.5;
   const angle = Math.abs(hourAngle - minuteAngle);
   return Math.min(angle, 360 - angle);
 };

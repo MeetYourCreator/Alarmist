@@ -1,4 +1,4 @@
-export default Colors = {
+export const Colors = {
   blue: 'rgb(90,168,219)',
   green: 'rgb(91,174,53)',
   pink: 'rgb(235,105,158)',
@@ -7,4 +7,4 @@ export default Colors = {
   red: 'rgb(230,54,47)',
   orange: 'rgb(239,117,27',
   yellow: 'rgb(250,234,9)',
-}
+};
