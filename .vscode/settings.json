@@ -13,5 +13,6 @@
   "javascript.preferences.quoteStyle": "single",
   "xml.preferences.quoteStyle": "single",
   "editor.autoClosingQuotes": "always",
-  "editor.autoClosingBrackets": "always"
+  "editor.autoClosingBrackets": "always",
+  "prettier.bracketSpacing": false
 }
