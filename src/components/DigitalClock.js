@@ -1,36 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
+import {showLocalTime} from '../../utils/utils.time.js';
 
-import {showLocalTime} from '../utils/utils.time.js';
-// import { DigitalClockContainer } from '../../components/styled/digital/DigitalClockContainer.js';
-// import { Clock } from '../../components/styled/digital/Clock.js';
-// import { ClockText } from '../../components/styled/digital/ClockText.js';
-// import { Location } from '../../components/styled/digital/Location.js';
-// import AlarmDetail from '../../components/alarm/AlarmDetail.jsx';
-
-// import DigitalClockNumberColorModal from '../../components/modals/DigitalClockNumberColorModal.jsx';
-// import DigitalClockNumberFontModal from '../../components/modals/DigitalClockNumberFontModal.jsx';
-// import AlarmModal from '../../components/modals/AlarmModal.jsx';
-
-// import { useSelector } from 'react-redux';
-
-const DigitalClock = () => {
-  //state
+export const DigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime());
   const [colorValue, setColorValue] = useState('#0000FF');
-  // const [fontValue, setFontValue] = useState('press-start-2p');
+  const [fontValue, setFontValue] = useState('press-start-2p');
 
-  // const alarms = useSelector((state) => state.alarms.activeAlarms);
-
-  //event handlers
   const colorHandler = event => {
     setColorValue(event);
   };
-  // const fontHandler = (event) => setFontValue(event);
-  // const alarmHandler = event => setAlarmValue(event);
+  const fontHandler = event => setFontValue(event);
 
-  // const currentFont = fontValue;
   const currentColor = colorValue;
+  const currentFont = fontValue;
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -41,23 +24,13 @@ const DigitalClock = () => {
 
   return (
     <>
-      <SafeAreaView style={styles.screenContainer}>
+      <SafeAreaView>
         <View style={styles.clockContainer}>
           <View style={styles.clock}>
-
-            <Text
-              style={[
-                styles.clockText,
-                {
-                  color: currentColor,
-                  textShadowColor: currentColor,
-                  // fontFamily: currentFont,
-                },
-              ]}>
-              {localTime}
-            </Text>
+            <View style={styles.clockText}>
+              <Text>Digital Alarm Clock</Text>
+            </View>
           </View>
-          <Text style={styles.location}>LocalTime</Text>
         </View>
       </SafeAreaView>
     </>
@@ -133,5 +106,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-export default DigitalClock;

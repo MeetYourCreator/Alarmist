@@ -8,6 +8,7 @@ export const HomeScreen = () => {
     <SafeAreaView>
       <Text>HomeScreen.js</Text>
       <DigitalClock />
+      <DigitalClock />
     </SafeAreaView>
   );
 };

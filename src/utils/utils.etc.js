@@ -1,10 +1,10 @@
-export const formatZoneName = (zoneStr) => {
+export const formatZoneName = zoneStr => {
   // console.log('%c%s','color: green; background: yellow',`time.js, 41 zoneStr: ${zoneStr}`)
 
   const zoneArr = zoneStr.split('');
   // console.log(`time.js, 44 zoneArr: ${zoneArr}`)
 
-  const indexOfFirstForwardSlash = zoneArr.findIndex((firstForwardSlash) => firstForwardSlash === '/');
+  const indexOfFirstForwardSlash = zoneArr.findIndex(firstForwardSlash => firstForwardSlash === '/');
   // console.log(`time.js, 47 indexOfFirstForwardSlash: ${indexOfFirstForwardSlash}`)
 
   const zoneArr2 = zoneStr.split(',');
@@ -20,7 +20,7 @@ export const formatZoneName = (zoneStr) => {
 
   const indexOfSecondForwardSlash = firstForwardSlashRemovedArr
     .split('')
-    .findIndex((secondForwardSlash) => secondForwardSlash === '/')
+    .findIndex(secondForwardSlash => secondForwardSlash === '/');
   // console.log(`time.js, 59 indexOfSecondForwardSlash: ${indexOfSecondForwardSlash}`)
 
   if (indexOfSecondForwardSlash >= 0) {
@@ -36,9 +36,9 @@ export const formatZoneName = (zoneStr) => {
       .replace('_', ' ');
     return country2;
   }
-}
+};
 
 export const searchInput = (input, regexp) => {
-  const results = input.filter(entry => entry.toLowerCase().includes(regexp))
+  const results = input.filter(entry => entry.toLowerCase().includes(regexp));
   return results;
-}
+};
