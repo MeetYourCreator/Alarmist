@@ -1,14 +1,15 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
 
-import DigitalClock from './components/DigitalClock';
+import DigitalClock from '../components/DigitalClock';
 
-export const HomeScreen = () => {
+const HomeScreen = () => {
   return (
     <SafeAreaView>
       <Text>HomeScreen.js</Text>
       <DigitalClock />
-      <DigitalClock />
     </SafeAreaView>
   );
 };
+
+export default HomeScreen;

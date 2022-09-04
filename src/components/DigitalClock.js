@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
-import {showLocalTime} from '../../utils/utils.time.js';
+import {colors} from '../styles_global/colors.js';
+import {showLocalTime} from '../utils/utils.time.js';
 
-export const DigitalClock = () => {
+const DigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime());
   const [colorValue, setColorValue] = useState('#0000FF');
   const [fontValue, setFontValue] = useState('press-start-2p');
@@ -27,9 +28,7 @@ export const DigitalClock = () => {
       <SafeAreaView>
         <View style={styles.clockContainer}>
           <View style={styles.clock}>
-            <View style={styles.clockText}>
-              <Text>Digital Alarm Clock</Text>
-            </View>
+            <Text style={styles.clockText}>{localTime}</Text>
           </View>
         </View>
       </SafeAreaView>
@@ -59,7 +58,7 @@ const styles = StyleSheet.create({
     borderWidth: 8,
     borderColor: '#2d2d2d',
     borderRadius: 15,
-    backgroundColor: '#151617',
+    backgroundColor: '#f70300',
   },
   clockText: {
     display: 'flex',
@@ -69,6 +68,7 @@ const styles = StyleSheet.create({
     marginBottom: 'auto',
     textAlign: 'center',
     fontSize: 35,
+    color: colors.blue,
     textShadowColor: '#f70300',
   },
   location: {
@@ -106,3 +106,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default DigitalClock;
