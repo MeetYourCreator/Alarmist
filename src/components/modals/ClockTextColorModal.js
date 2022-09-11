@@ -3,16 +3,14 @@ import {TouchableOpacity, View, SafeAreaView, StyleSheet} from 'react-native';
 import Modal from 'react-native-modal';
 import ClockTextColorOptionsButton from '../buttons/ClockTextColorOptionsButton';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 // import {Ionicons} from '@expo/vector-icons';
 // import {MaterialIcons} from '@expo/vector-icons';
 // import {AntDesign} from '@expo/vector-icons';
 // import {Entypo} from '@expo/vector-icons';
 
-const CloclTextColorModal = ({
-  // iconName,
-  // iconColor,
-  onColorHandle,
-}) => {
+const CloclTextColorModal = ({iconName, onColorHandle}) => {
   const [showModal, setShowModal] = useState(false);
 
   const [_E8E500, set_E8E500] = useState('#E8E500');
@@ -108,6 +106,7 @@ const CloclTextColorModal = ({
             />
           </View>
         </Modal>
+        <Icon name="rocket" size={30} color="#900" />
         {/*Updating the state to make Modal Visible*/}
         {/* <Ionicons
           name={iconName}
