@@ -3,6 +3,8 @@ import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
 import {colors} from '../styles_global/colors.js';
 import {showLocalTime} from '../utils/utils.time.js';
 
+import ClockTextColorModal from './modals/ClockTextColorModal';
+
 const DigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime());
   const [colorValue, setColorValue] = useState('#0000FF');
@@ -30,6 +32,9 @@ const DigitalClock = () => {
           <View style={styles.clock}>
             <Text style={styles.clockText}>{localTime}</Text>
           </View>
+        </View>
+        <View style={styles.menu}>
+          <ClockTextColorModal onColorHandle={colorHandler} />
         </View>
       </SafeAreaView>
     </>
